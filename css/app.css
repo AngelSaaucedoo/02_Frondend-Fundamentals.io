@@ -47,31 +47,25 @@ span.title {
 /*Navbar Configuration*/
 .navbar {
     background-color: #0077b6;
-    display: flex;
-    /*Usar Flex: acomoda en flex */
-    align-items: center;
-    /*justify-content: center;*/
-    /*Centrar logo y menu*/
-    justify-content: space-between;
-    /*Espacio entre logo y menu*/
-    padding: 5px 40px;
-    /*Espaciado interno*/
+    display: flex;/*Usar Flex: acomoda en flex */
+    align-items: center;/*justify-content: center;*/
+    justify-content: space-between;/*Espacio entre logo y menu*/
+    padding: 5px 40px;/*Espaciado interno*/
 }
 
 .menu {
-    list-style: none;
-    /*Quitar viñetas de la lista*/
-    display: flex;
-    /*Hacer que los elementos de la lista estén en línea*/
+    list-style: none;/*Quitar viñetas de la lista*/
+    display: flex; /*Hacer que los elementos de la lista estén en línea*/
     gap: 25px;
+    flex-wrap: wrap; /*Permitir que los elementos se envuelvan si es necesario*/
 }
 
 .menu li a {
-    text-decoration: none;
-    /*Quitar subrayado de los enlaces*/
+    text-decoration: none; /*Quitar subrayado de los enlaces*/
     color: white;
     font-size: 16px;
     font-family: Arial, sans-serif;
+    
     transition: color 0.3s;
 }
 
@@ -91,7 +85,8 @@ span.title {
 /*Navbar Busqeuda*/
 .search {
     display: flex;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 15px;
     /*Espacio entre input y botón*/
 }
 
@@ -140,6 +135,7 @@ main section article {
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 main section article div.card_img {
@@ -151,16 +147,21 @@ main section article div.card_img {
 }
 main section article div img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 
 main section article div.card_info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 
     background-color: #0077b6;
     border-radius: 0px;
     padding: 10px;
-    text-align: center;
+    
     width: 100%;
     height: 100%;
 }
